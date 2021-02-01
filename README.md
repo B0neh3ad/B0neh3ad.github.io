@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Centrarium [![Circle CI](https://circleci.com/gh/bencentra/centrarium/tree/master.svg?style=svg)](https://circleci.com/gh/bencentra/centrarium/tree/master)
 
 A simple yet classy theme for your Jekyll website or blog. Customizable to fit your style or brand.
@@ -247,3 +248,7 @@ MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/master/LICENS
 [ga]: http://www.google.com/analytics/
 [archives]: https://github.com/jekyll/jekyll-archives
 [sitemap]: https://github.com/jekyll/jekyll-sitemap
+=======
+# B0neh3ad.github.io
+Github Blog
+>>>>>>> 9fbad5baf5fc257dec1ea17a04d56a198712fbc6

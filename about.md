@@ -5,7 +5,7 @@ permalink: /about/
 main_nav: true
 ---
 
-![alt text]({{ site.baseurl }}/assets/profile-placeholder.gif "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/hi.png "Profile Picture"){:.profile}
 
 안녕... 아직까지도 블로그 운영법 잘 몰라서 일일히 github에서 문서 수정 중이에요...
 

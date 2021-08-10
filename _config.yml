@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Compile Error
+tagline: 조금씩이라도 꾸준히
 email: js1044k@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  조금씩이라도 꾸준히
+  수학, PS, 기타 이런저런 이야기를 담은 블로그입니다
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: B0h3d

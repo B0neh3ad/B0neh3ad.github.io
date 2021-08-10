@@ -4,15 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+안녕하세요!  
+저는 이제 막 본격적으로 개발을 시작한 컴공 새내기 김진수입니다 :D
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+현재 서울대학교 컴퓨터공학부에 21학번으로 재학 중입니다.  
+주된 관심분야는 PS고, 언어는 주로 C++, python을 사용하고 있습니다.  
+차차 블로그를 채워나갈 계획이니, 많은 관심 부탁드려요 :)

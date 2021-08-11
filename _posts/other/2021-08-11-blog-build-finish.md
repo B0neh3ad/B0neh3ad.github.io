@@ -24,6 +24,19 @@ tags:
 * ```tzinfo```의 부재로 인한 오류  
   에러 메세지는 정확히 기억 안 나는데 ```gem install tzinfo``` 치니까 바로 해결됐다. 아마 이게 ```timezone``` 변수 설정 후에 생긴 오류였던 거 같다.
 
+* ```Skipping: _posts/boj/2021-08-12-boj-1920.md has a future date```
+
+  ```
+  Regenerating: 1 file(s) changed at 2021-08-11 16:45:58
+                    _posts/boj/2021-08-12-boj-1920.md
+          Skipping: _posts/boj/2021-08-12-boj-1920.md has a future date
+          Skipping: _posts/boj/2021-08-12-boj-2750-2751-10989.md has a future date
+       Jekyll Feed: Generating feed for posts
+                    ...done in 1.3395643 seconds.
+  ```
+
+  github에 push 했을 때는 한국 시간대에 맞게 잘 업로드되던 포스팅인데 로컬에서 업로드하려고 하면 서버 시간이랑 안 맞는지 자꾸 튕긴다. 로컬 서버 시간 설정은 또 따로 해줘야 하나...
+
 학기 시작하고 과제도 하고, 시험도 보고, 동아리도 하고, 정말 이것저것 하느라 미뤄두다가 여름방학이 되어서야 이렇게나마 완성했다... 이제부터라도 열심히 글 올려야지.
 
 ## 블로그 제작 시 참고 자료

@@ -2,6 +2,8 @@
 title:  "Intro"
 excerpt: "Algorithm - Intro"
 
+toc: true
+
 categories:
   - Algorithm
 tags:

@@ -24,7 +24,7 @@ description              : "고등수학, 수학, 알고리즘, 자료구조, Pr
 url                      : "https://B0neh3ad.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/bio-photo-c-clef.jpg"
+teaser                   : # "/assets/images/bio-photo-c-clef.jpg"
 logo                     : "/assets/images/favicon.ico"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)

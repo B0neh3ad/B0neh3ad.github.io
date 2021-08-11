@@ -1,3 +1,5 @@
+<!-- tag archive 모아둔 archive page -->
+
 {%- for post in site.tags[include.taxonomy] -%}
   {%- unless post.hidden -%}
     {% include archive-single.html %}

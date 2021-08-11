@@ -22,7 +22,7 @@ last_modified_at: 2021-08-11T18:42:00-05:00
 * ``` `require': cannot load such file -- webrick (LoadError)```  
   저거 해결하고 기쁨에 차서 ```bundle exec jekyll serve```를 cmd 창에 입력하자마자 맞닥뜨린 오류. 다행히 [이 글](https://junho85.pe.kr/1850)을 보고 ```bundle add webrick``` 한 줄로 해결할 수 있었다.
 
-* ```tzinfo```의 부재로 인한 오류
+* ```tzinfo```의 부재로 인한 오류  
   에러 메세지는 정확히 기억 안 나는데 ```gem install tzinfo``` 치니까 바로 해결됐다. 아마 이게 ```timezone``` 변수 설정 후에 생긴 오류였던 거 같다.
 
 학기 시작하고 과제도 하고, 시험도 보고, 동아리도 하고, 정말 이것저것 하느라 미뤄두다가 여름방학이 되어서야 이렇게나마 완성했다... 이제부터라도 열심히 글 올려야지.

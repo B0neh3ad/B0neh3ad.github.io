@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus"
   disqus:
-    shortname            : "B0neh3ad-github-io"
+    shortname            : "b0neh3ad-github-io"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -283,7 +283,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
+      show_date: true
       comments: true
       share: true
       related: true

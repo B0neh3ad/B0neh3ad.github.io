@@ -1,6 +1,5 @@
 ---
 title:  "블로그 (일단은) 시작!"
-excerpt: "Algorithm - Intro"
 
 toc: true
 

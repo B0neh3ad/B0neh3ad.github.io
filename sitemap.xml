@@ -5,6 +5,8 @@
     {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+        <!-- <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod> -->
+        <lastmod>{{ post.last_modified_at | date: '%Y-%m-%d' }}</lastmod>
     </url>
     {% endfor %}
 
@@ -13,10 +15,10 @@
     {% if page.layout != 'feed' %}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+        <!-- <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod> -->
+        <lastmod>{{ post.last_modified_at | date: '%Y-%m-%d' }}</lastmod>
     </url>
     {% endif %}
     {% endif %}
     {% endfor %}
 </urlset>
-<!-- <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod> -->
-<lastmod>{{ post.last_modified_at | date: '%Y-%m-%d' }}</lastmod>

@@ -26,3 +26,6 @@ Retrofit을 이용해 http 통신을 하는 경우, 아래와 같이 GET method�
         @Path("data_id") dataId: Int
     ): DataByIdResponse
 ```
+
+[참고]   
+https://stackoverflow.com/questions/58567053/how-to-add-url-parameter-in-a-retrofit-get-request-in-kotlin

@@ -26,6 +26,8 @@ tags:
 >+ GridRecyclerViewLayout에서 화면 크기에 맞게 item 크기를 조정하는 방법(instagram 프로필 페이지의 Feed 목록에 사용)
 >+ Response\<T\>의 사용
 >+ Glide의 사용법
+>+ Activity, Fragment 전환 시 애니메이션 넣기(OverridePendingTransition(), https://greedy0110.tistory.com/52)
+>+ 한 Fragment에서 다른 Fragment로 전환하기 (https://mc10sw.tistory.com/16)
 
 이 외에도 익혀야 할 것/익히게 될 것들이 많으나 일단 위에 있는 것들을 먼저 정리하고 추가해 나가고자 한다. 이들에 대한 포스팅은 시간 나는대로 차차 할 예정이다.  
   

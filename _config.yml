@@ -19,8 +19,8 @@ locale                   : "en-US"
 title                    : "Compile Error"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "돌머리"
-description              : "고등수학, 수학, 알고리즘, 자료구조, Problem Solving, PS, IT, 입시 등에 대해 다루는 대학생 블로그"
+name                     : "B0neh3ad"
+description              : "고등수학, 수학, 알고리즘, 자료구조, Problem Solving, PS, IT, ML, DL"
 url                      : "https://B0neh3ad.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -101,9 +101,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "돌머리"
+  name             : "B0neh3ad"
   avatar           : "/assets/images/bio-photo-c-clef.jpg"
-  bio              : "수학, PS에 관심 많은 공돌이 / SNU CSE 21"
+  bio              : "뭐해먹고 살까"
   location         : "Seoul, South Korea"
   email            :
   links:

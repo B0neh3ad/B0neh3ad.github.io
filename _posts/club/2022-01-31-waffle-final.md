@@ -5,9 +5,10 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Club
+  - WaffleStudio
 tags:
-  - Club
+  - WaffleStudio
+  - Toy Project
 ---
 
 그저께 최종 총회까지 마무리되면서, 이제 19.5기 Rookies로서의 일정은 모두 끝났다.  

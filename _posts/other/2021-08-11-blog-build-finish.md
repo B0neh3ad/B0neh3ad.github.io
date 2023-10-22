@@ -1,14 +1,13 @@
 ---
-title:  "블로그 (일단은) 시작!"
-
+title: 블로그 (일단은) 시작!
 toc: true
 toc_sticky: true
-
 categories:
   - Other
 tags:
   - Blog
   - Github
+published: true
 ---
 ## 드디어 블로그를 시작했다!
 

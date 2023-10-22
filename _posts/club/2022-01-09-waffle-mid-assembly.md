@@ -5,9 +5,10 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Club
+  - WaffleStudio
 tags:
-  - Club
+  - WaffleStudio
+  - Android
 ---
 
 > 드디어 어제, 중간 총회가 끝났다

@@ -1,14 +1,13 @@
 ---
-title:  "[Wafflestudio] 최종 총회 끝!"
-
+title: '[Wafflestudio] 최종 총회 끝!'
 toc: true
 toc_sticky: true
-
 categories:
   - Club
 tags:
   - WaffleStudio
   - Toy Project
+published: true
 ---
 
 그저께 최종 총회까지 마무리되면서, 이제 19.5기 Rookies로서의 일정은 모두 끝났다.  
@@ -23,6 +22,6 @@ tags:
 >+ 다크모드 구현
 >+ Firebase의 Dynamic Link를 이용한 공유 기능 구현
 
-구체적인 토이프로젝트 내용은 이 글에 숨겨둔 노션 링크를 통해 확인할 수 있다. (굳이 링크를 대놓고 올릴 이유는 없는 거 같아서 숨겨뒀다.)
+구체적인 토이프로젝트 내용은 [여기](https://sepia-condition-48e.notion.site/WaffleStudio-19-5-Rookies-team3-69bd8eed5fbe4e20bc3b3a5916b92e7f)에서 확인할 수 있다.
 
-<!-- https://sepia-condition-48e.notion.site/WaffleStudio-19-5-Rookies-team3-69bd8eed5fbe4e20bc3b3a5916b92e7f -->
+

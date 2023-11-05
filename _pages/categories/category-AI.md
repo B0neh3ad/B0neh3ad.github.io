@@ -1,6 +1,6 @@
 ---
 title: "AI"
-permalink: /categories/boj/
+permalink: /categories/ai/
 layout: archive
 author_profile: true
 sidebar_main: true

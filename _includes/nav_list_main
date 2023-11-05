@@ -11,7 +11,6 @@
             📂 <span style="font-family:'Cafe24Oneprettynight';">전체</style> <span style="font-family:'Coming Soon';">({{sum}})</style>
       </li>
       <li>
-        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
         <span class="nav__sub-title">개발</span>
             <ul>
                 {% for category in site.categories %}
@@ -21,10 +20,7 @@
                 {% endfor %}
             </ul>
         <span class="nav__sub-title">Algorithm</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
-                <!--BOJ 카테고리 글들을 모아둔 페이지인 /categories/boj 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "BOJ" %}
                         <li><a href="/categories/boj" class="">BOJ ({{category[1].size}})</a></li>
@@ -35,6 +31,14 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Programmers" %}
                         <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">AI</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "AI" %}
+                        <li><a href="/categories/ai" class="">AI ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

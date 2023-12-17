@@ -27,7 +27,7 @@ repository               : "B0neh3ad/B0neh3ad.github.io" # GitHub username/repo-
 teaser                   : "/assets/images/profile_bonobono.jpg"
 logo                     : "/assets/images/favicon.ico"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 200
 date_format              : "%Y.%m.%d"
 comments:

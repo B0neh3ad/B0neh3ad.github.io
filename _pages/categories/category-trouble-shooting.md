@@ -7,7 +7,7 @@ sidebar_main: true
 taxonomy: Trouble Shooting
 ---
 
-맞왜틀 틀왜맞의 집합소
+뭐가 문제일까...
 
 --------
 

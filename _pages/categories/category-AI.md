@@ -7,7 +7,7 @@ sidebar_main: true
 taxonomy: AI
 ---
 
-ML/DL 관련 대회, 공부 흔적 등
+ML/DL 관련 공부 흔적
 
 --------
 

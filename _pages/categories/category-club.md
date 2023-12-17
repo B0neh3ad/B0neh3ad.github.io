@@ -7,7 +7,7 @@ sidebar_main: true
 taxonomy: Club
 ---
 
-교내외로 활동하고 있는 동아리에 관한 포스팅
+교내외로 활동하고 있는 동아리들
 
 --------
 

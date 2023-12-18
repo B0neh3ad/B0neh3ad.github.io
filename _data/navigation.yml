@@ -14,3 +14,21 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+categories:
+  - title: "웹/앱 개발"
+    children:
+      - title: "Backend"
+        url: /categories/backend
+      - title: "Android"
+        url: /categories/android
+  
+  - title: "AI"
+    children:
+      - title: "AI"
+        url: /categories/ai
+
+  - title: "알고리즘"
+    children:
+      - title: "BOJ"
+        url: /categories/boj

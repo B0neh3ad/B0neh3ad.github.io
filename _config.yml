@@ -300,9 +300,7 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar_main: true
-      sidebar:
-        nav: "categories"
+      sidebar_categories: true
 
   # _pages
   - scope:
@@ -315,5 +313,4 @@ defaults:
       comments: false
       share: true
       related: false
-      sidebar:
-        nav: "categories"
+      sidebar_categories: true

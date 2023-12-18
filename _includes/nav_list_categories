@@ -1,0 +1,34 @@
+{% assign all_posts_count = site.posts | size %}
+{% assign navigation = site.data.navigation.categories %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__title" style="padding-left: 0;">{{ site.data.ui-text[site.locale].categories_nav_label }} ({{all_posts_count}})</span>
+    </li>
+    {% for nav in navigation %}
+      <li>
+        {% if nav.url %}
+          <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+        {% else %}
+          <span class="nav__sub-title">{{ nav.title }}</span>
+        {% endif %}
+
+        {% if nav.children != null %}
+        <ul>
+          {% for child in nav.children %}
+            {% assign category_count = site.categories[child.title].size %}
+            {% if category_count > 0 %}
+              <li>
+                <a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{category_count}})</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -20,6 +20,7 @@ title                    : "Compile Error"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "B0neh3ad"
+meta_description         : "공부&개발 기록 블로그입니다" # description for searching engine e.g. google
 description              : "뭐라도 쓰다보면 뭐든 남겠지"
 url                      : "https://B0neh3ad.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"

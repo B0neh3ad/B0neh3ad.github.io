@@ -1,5 +1,5 @@
 ---
-title:  "[DL/Tabular] CTR Prediction"
+title:  "[DL/Tabular] CTR Prediction - Avazu Dataset"
 
 categories:
   - AI

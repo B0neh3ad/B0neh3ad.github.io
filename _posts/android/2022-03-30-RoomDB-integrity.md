@@ -1,9 +1,6 @@
 ---
 title:  "[Room DB] Room cannot verify the data integrity"
 
-toc: true
-toc_sticky: true
-
 categories:
   - Android
 tags:

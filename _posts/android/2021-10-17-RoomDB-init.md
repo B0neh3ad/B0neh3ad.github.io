@@ -1,9 +1,6 @@
 ---
 title:  "[Room DB] 중복 데이터 없이 DB 초기화하기"
 
-toc: true
-toc_sticky: true
-
 categories:
   - Android
 tags:

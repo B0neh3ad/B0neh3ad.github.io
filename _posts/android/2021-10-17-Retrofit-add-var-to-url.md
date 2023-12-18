@@ -1,9 +1,6 @@
 ---
 title:  "[Retrofit] GET method로 불러올 때 변수를 url에 추가하기"
 
-toc: true
-toc_sticky: true
-
 categories:
   - Android
 tags:

@@ -296,9 +296,8 @@ defaults:
       related: true
       mathjax: true
       sidebar_main: true
-      toc: true
-      toc_sticky: true
-      toc_label: "Index"
+      sidebar:
+        nav: "categories"
 
   # _pages
   - scope:
@@ -311,3 +310,5 @@ defaults:
       comments: false
       share: true
       related: false
+      sidebar:
+        nav: "categories"

@@ -3,4 +3,8 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
 
+{% if page.use_math %}
+  {% include mathjax_support.html %}
+{% endif %}
+
 <!-- end custom head snippets -->

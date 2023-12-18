@@ -24,7 +24,7 @@ description              : "뭐라도 쓰다보면 뭐든 남겠지"
 url                      : "https://B0neh3ad.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "B0neh3ad/B0neh3ad.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/profile_bonobono.jpg"
+teaser                   : # "/assets/images/profile_bonobono.jpg"
 logo                     : "/assets/images/favicon.ico"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
@@ -87,7 +87,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/profile_bonobono.jpg" # Open Graph/Twitter default site image
+og_image                 : # "/assets/images/profile_bonobono.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -278,6 +278,12 @@ compress_html:
   ignore:
     envs: development
 
+# Math equation
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 # Defaults
 defaults:
@@ -294,7 +300,6 @@ defaults:
       comments: true
       share: true
       related: true
-      mathjax: true
       sidebar_main: true
       sidebar:
         nav: "categories"

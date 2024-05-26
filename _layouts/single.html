@@ -8,7 +8,11 @@ layout: default
   {% include page__hero_video.html %}
 {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
   {% unless paginator %}
     {% include breadcrumbs.html %}
   {% endunless %}
@@ -51,7 +55,6 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

@@ -439,10 +439,11 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2rem;
 
   a {
     color: inherit;
+    font-size: .875em;
   }
 
   .active {
@@ -484,8 +485,7 @@
   margin: 0;
   padding: 0.5rem 0.75rem;
   font-family: $sans-serif-narrow;
-  font-size: $type-size-5;
-  font-weight: bold;
+  font-size: .6em;
 }
 
 .nav__sub-title {
@@ -494,7 +494,7 @@
   padding: 0.25rem 0;
   font-family: $sans-serif-narrow;
   font-size: $type-size-6;
-  font-weight: bold;
+  color: #a9dde0;
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
 }

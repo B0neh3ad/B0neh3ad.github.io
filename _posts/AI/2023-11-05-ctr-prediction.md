@@ -1,7 +1,5 @@
 ---
-title:  "[DL/Tabular] CTR Prediction"
-toc: true
-toc_sticky: true
+title:  "[DL/Tabular] CTR Prediction - Avazu Dataset"
 
 categories:
   - AI

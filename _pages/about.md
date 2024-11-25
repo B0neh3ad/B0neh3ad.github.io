@@ -5,7 +5,7 @@ layout: single
 ---
 
 ### *Jinsu Kim* / B0neh3ad   
-([mail](mailto:js1044k@gmail.com), [github](http://github.com/B0neh3ad), [github blog](http://B0neh3ad.github.com), [velog](https://velog.io/@b0neh3ad/posts), [linkedin](https://www.linkedin.com/in/%EC%A7%84%EC%88%98-%EA%B9%80-b769832a1/))
+([mail](mailto:js1044k@gmail.com), [github](http://github.com/B0neh3ad), [github blog](http://B0neh3ad.github.io), [velog](https://velog.io/@b0neh3ad/posts), [linkedin](https://www.linkedin.com/in/%EC%A7%84%EC%88%98-%EA%B9%80-b769832a1/))
 
 - Interested in ML/DL, Web Dev
 

@@ -4,15 +4,89 @@ permalink: /about/
 layout: single
 ---
 
-## 안녕하세요!
+# About Me
 
-컴퓨터공학을 전공하고 있는 대학생의 블로그입니다.  
-이 블로그에서는 아래의 내용을 다룹니다. 아마도요.
+*Jinsu Kim* / B0neh3ad   
+(mail, github, github blog, velog, linkedin)
 
-* CS(알고리즘, 자료구조)
-* 웹/앱 개발(Frontend / Backend / Android)
-* ML/DL
+- Majoring Computer Science & Engineering at SNU (2021~)
+- Interested in ML/DL, Web Dev
 
-앞으로 차곡차곡 글을 쌓아갈 예정이니 많은 관심 부탁드려요! :)
+## Education
 
-\+ 현재 공군 병 837기로 2022년 4월 25일부터 2024년 1월 24일까지 복무 중입니다. (전역시켜줘)
+**Seoul National University**, Mar. 2021 - Feb. 2027 (Expected)  
+Sophomore, Majoring Computer Science & Engineering  
+Total GPA of 3.96 / 4.3, Major GPA of 4.02 / 4.3 (Credits taken: 59)
+
+## Project Experience
+
+***Siksha* - SNU cafeteria menu providing service**  
+Mar. 2024 - Now / Website link  
+*Position: Team Member*
+- Member of Frontend Development Team (React.js, Next.js)
+- // 프론트 개발자로서 뭘 했는지
+- with 20+ members in development teams  
+- // 뭘 배웠는지 - 서로 다른 파트의 사람들과 소통하는 법
+
+
+**End-to-End MRI Reconstruction for Variously Accelerated Brain Images**  
+Jun. 2024 - Aug. 2024 / github repo  
+*Position: Team Member*  
+- Team project for 2024 SNU FastMRI Challenge
+- E2EVarNet is used to reconstruct MRI image from accelerated k-space domain, and NAFNet is used for additional denoising and deblurring of the reconstruction image
+- 
+- 
+
+**Automatic Speech Recognition for Effective Delivery of Tactical Commands from Commanders**  
+Nov. 2024 - Dec. 2024 / github repo  
+*Position: Team Leader*
+- Team project for 2023 MAICON
+- Whisper is chosen as a baseline model because of its noise-robust, State-Of-The-Art ASR performance
+- 
+- 
+
+**Mobile Keyboard Application for Developmentally Disabled**  
+Jan. 2022 - Oct. 2022  
+*Position: Team Member*
+- Team project fo 2022 SNU Social Resposibility PLUS+ Challenge
+- 
+- 
+
+## Awards & Honors
+
+**Awards**
+
+2024.09, **4th place**, SNU FastMRI Challenge, *SNU*  
+2023.12, **2nd place**, MAICON(Military AI Competition), *Ministry of National Defense, Republic of Korea*   
+2022.10, **2nd place**, SNU Social Resposibility PLUS+ Challenge, *SNU*  
+
+*Other participation in competitions*  
+2024.11 **19th place** / 88 teams, ICPC 2024 Seoul Regional
+
+**Honors**  
+
+2024.09, Academic Excellence Scholaship, *SNU*  
+2021.09, Academic Excellence Scholaship, *SNU*
+
+## Extracurricular Activity
+
+*WaffleStudio* - **Student Club for Web & Mobile App Development**  
+Sep. 2021 - Now
+- Learned Andriod & Frontend Web Application Development
+
+*VESS* - **Student Club for Appropriate Technology**  
+Mar. 2021 - Feb. 2022
+- Learned & studied various ATs
+- looking for the ways how to utilize technical knowledge for creating and improving AT products
+
+## Teaching
+
+Teaching Assistant (Tutor) / 2024-1, 2024-2 semesters
+Basic Computing: First Adventures in Computing
+- answered to students' questions for basic of web crawling, data analysis & visualization using Python
+
+## Skills
+
+**Programming** C/C++, Python, Java  
+**Deep Learning** Tensorflow, Pytorch, Huggingface  
+**Web Development** React.js Next.js Django

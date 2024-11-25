@@ -1,22 +1,19 @@
 ---
-title: "About"
+title: "About Me"
 permalink: /about/
 layout: single
 ---
 
-# About Me
+### *Jinsu Kim* / B0neh3ad   
+([mail](mailto:js1044k@gmail.com), [github](http://github.com/B0neh3ad), [github blog](http://B0neh3ad.github.com), [velog](https://velog.io/@b0neh3ad/posts), [linkedin](https://www.linkedin.com/in/%EC%A7%84%EC%88%98-%EA%B9%80-b769832a1/))
 
-*Jinsu Kim* / B0neh3ad   
-(mail, github, github blog, velog, linkedin)
-
-- Majoring Computer Science & Engineering at SNU (2021~)
 - Interested in ML/DL, Web Dev
 
 ## Education
 
 **Seoul National University**, Mar. 2021 - Feb. 2027 (Expected)  
-Sophomore, Majoring Computer Science & Engineering  
-Total GPA of 3.96 / 4.3, Major GPA of 4.02 / 4.3 (Credits taken: 59)
+- Sophomore, Majoring Computer Science & Engineering  
+- Total GPA of 3.96 / 4.3, Major GPA of 4.02 / 4.3 (Credits taken: 59)
 
 ## Project Experience
 
@@ -24,9 +21,9 @@ Total GPA of 3.96 / 4.3, Major GPA of 4.02 / 4.3 (Credits taken: 59)
 Mar. 2024 - Now / Website link  
 *Position: Team Member*
 - Member of Frontend Development Team (React.js, Next.js)
-- // 프론트 개발자로서 뭘 했는지
+- (프론트 개발자로서 뭘 했는지)
 - with 20+ members in development teams  
-- // 뭘 배웠는지 - 서로 다른 파트의 사람들과 소통하는 법
+- (뭘 배웠는지 - 서로 다른 파트의 사람들과 소통하는 법)
 
 
 **End-to-End MRI Reconstruction for Variously Accelerated Brain Images**  

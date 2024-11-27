@@ -35,6 +35,7 @@ Nov. 2024 - Dec. 2024 / [github repo](https://github.com/RokafNet/rokafnet)
 - Team project for 2023 MAICON
 - Whisper is chosen as a baseline model because of its noise-robust, State-Of-The-Art ASR performance
 - [Noisereduce](https://github.com/timsainb/noisereduce/tree/master) used the distribution of input dataset's noise to effectively remove audio noise
+- Constructed data preprocess code and train/inference pipeline
 
 **Mobile Keyboard Application for Developmentally Disabled**  
 Jan. 2022 - Oct. 2022  

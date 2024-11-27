@@ -18,19 +18,19 @@ layout: single
 ## Project Experience
 
 ***Siksha* - SNU cafeteria menu providing service**  
-Mar. 2024 - Now / Website link  
+Mar. 2024 - Now / [Website link](http://siksha.wafflestudio.com/)  
 *Position: Team Member*
 - Member of Frontend Development Team (React.js, Next.js)
 - Communicated with 20+ developers
 
 **End-to-End MRI Reconstruction for Variously Accelerated Brain Images**  
-Jun. 2024 - Aug. 2024 / github repo  
+Jun. 2024 - Aug. 2024 / [github repo](https://github.com/B0neh3ad/FastMRI_2024_shasha)  
 *Position: Team Member*  
 - Team project for 2024 SNU FastMRI Challenge
 - E2EVarNet is used to reconstruct MRI image from accelerated k-space domain, and NAFNet is used for additional denoising and deblurring of the reconstruction image
 
 **Automatic Speech Recognition for Effective Delivery of Tactical Commands from Commanders**  
-Nov. 2024 - Dec. 2024 / github repo  
+Nov. 2024 - Dec. 2024 / [github repo](https://github.com/RokafNet/rokafnet)  
 *Position: Team Leader*
 - Team project for 2023 MAICON
 - Whisper is chosen as a baseline model because of its noise-robust, State-Of-The-Art ASR performance

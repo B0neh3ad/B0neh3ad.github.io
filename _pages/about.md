@@ -21,33 +21,26 @@ layout: single
 Mar. 2024 - Now / Website link  
 *Position: Team Member*
 - Member of Frontend Development Team (React.js, Next.js)
-- (프론트 개발자로서 뭘 했는지)
-- with 20+ members in development teams  
-- (뭘 배웠는지 - 서로 다른 파트의 사람들과 소통하는 법)
-
+- Communicated with 20+ developers
 
 **End-to-End MRI Reconstruction for Variously Accelerated Brain Images**  
 Jun. 2024 - Aug. 2024 / github repo  
 *Position: Team Member*  
 - Team project for 2024 SNU FastMRI Challenge
 - E2EVarNet is used to reconstruct MRI image from accelerated k-space domain, and NAFNet is used for additional denoising and deblurring of the reconstruction image
-- 
-- 
 
 **Automatic Speech Recognition for Effective Delivery of Tactical Commands from Commanders**  
 Nov. 2024 - Dec. 2024 / github repo  
 *Position: Team Leader*
 - Team project for 2023 MAICON
 - Whisper is chosen as a baseline model because of its noise-robust, State-Of-The-Art ASR performance
-- 
-- 
+- [Noisereduce](https://github.com/timsainb/noisereduce/tree/master) used the distribution of input dataset's noise to effectively remove audio noise
 
 **Mobile Keyboard Application for Developmentally Disabled**  
 Jan. 2022 - Oct. 2022  
 *Position: Team Member*
 - Team project fo 2022 SNU Social Resposibility PLUS+ Challenge
-- 
-- 
+- Using [AAC](https://www.asha.org/public/speech/disorders/aac/), the keyboard was designed to be able to use only with the recognition of symbolic pictures & audio
 
 ## Awards & Honors
 
@@ -80,7 +73,7 @@ Mar. 2021 - Feb. 2022
 
 Teaching Assistant (Tutor) / 2024-1, 2024-2 semesters
 Basic Computing: First Adventures in Computing
-- answered to students' questions for basic of web crawling, data analysis & visualization using Python
+- Answered to students' questions for basic of web crawling, data analysis & visualization using Python
 
 ## Skills
 

@@ -26,6 +26,8 @@ categories:
         url: /categories/android
       - title: "Git & Github"
         url: /categories/git-github
+      - title: "Github pages"
+        url: /categories/github-pages
   
   - title: "AI"
     children:
@@ -36,3 +38,8 @@ categories:
     children:
       - title: "BOJ"
         url: /categories/boj
+  
+  - title: "기타"
+    children:
+      - title: "etc"
+        url: /categories/etc

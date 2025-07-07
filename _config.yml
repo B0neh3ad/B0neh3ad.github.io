@@ -5,6 +5,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Force polling instead of using inotify (helps with "too many open files" errors)
+force_polling: true
+
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`

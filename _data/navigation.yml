@@ -18,10 +18,14 @@ main:
 categories:
   - title: "웹/앱 개발"
     children:
+      - title: "Frontend"
+        url: /categories/frontend
       - title: "Backend"
         url: /categories/backend
       - title: "Android"
         url: /categories/android
+      - title: "Git & Github"
+        url: /categories/git-github
   
   - title: "AI"
     children:

@@ -13,7 +13,7 @@ permalink: /git-github/:title/
 
 terminal에서 바로 push를 하기 위해 `git push origin --all` 을 쳤더니 이런다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d4dd3f32-8788-4a2c-8293-3dd116d026c5/b03a2ba2-1e5f-4202-a87f-de7f5ac840b0/Untitled.png)
+![Untitled](/assets/images/fatal-authentication-1.png)
 
 username, 비번 치래서 쳤더니 왜 말썽인지;;
 

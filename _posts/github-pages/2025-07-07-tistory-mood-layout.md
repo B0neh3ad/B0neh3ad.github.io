@@ -28,4 +28,4 @@ header:
 
 ### 적용 결과
 
-https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/
+<https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/layout-header-overlay-color/>

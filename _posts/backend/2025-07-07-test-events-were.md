@@ -1,5 +1,5 @@
 ---
-title:  "[MySQL] user 관련 명령어 정리"
+title:  "[Spring Test] Test events were not received"
 
 categories:
   - Backend
@@ -17,9 +17,9 @@ tags:
 
 ### 문제
 
-![Untitled](https://github.com/user-attachments/assets/367903a4-6463-4a5f-b5aa-ded4ec6b6178)
+![Untitled](/assets/images/test-events-were-1.png)
 
-![Untitled](https://github.com/user-attachments/assets/0e76412f-66bd-4053-9fb9-c26df29d2e27)
+![Untitled](/assets/images/test-events-were-2.png)
 
 Test class를 실행시켰더니 ‘Run’ window에 ‘Test events were not received’라고 뜨며 테스트가 전혀 실행되지 않았다. 이는 class 내 각 function을 실행시켰을 때도 마찬가지였다.
 
@@ -31,7 +31,7 @@ Test class를 실행시켰더니 ‘Run’ window에 ‘Test events were not rec
 
 Settings → ‘Gradle’ 검색 → Run tests using을 `Gradle (Default)`에서 `Intellij IDEA`로 바꾸니 바로 잘 돌아갔다.
 
-![Untitled](https://github.com/user-attachments/assets/efd7c801-4cda-4d7c-8af7-c6e8e9beae9b)
+![Untitled](/assets/images/test-events-were-3.png)
 
 ### 결론
 

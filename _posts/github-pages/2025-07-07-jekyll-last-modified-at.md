@@ -12,11 +12,11 @@ permalink: /github-pages/:title/
 
 깃헙 블로그를 손보던 중 자동으로 수정 날짜를 갱신하게 하고 싶어 jekyll-last-modified-at이라는 plugin을 넣었다. 그런데, 로컬에서는 잘 작동했지만 배포된 사이트에서는 작동하지 않았다.
 
-![local](https://github.com/user-attachments/assets/5598d1c9-4a37-4f0d-bdca-b26c8a9f9493)
+![local](/assets/images/jekyll-last-modified-at-1.png)
 
 local
 
-![실제 블로그](https://github.com/user-attachments/assets/bad31de5-ae1e-4762-a3a5-efb97424a93d)
+![실제 블로그](/assets/images/jekyll-last-modified-at-2.png)
 
 실제 블로그
 
@@ -28,7 +28,7 @@ github page를 이용해 배포하는 사이트의 경우, 순수하게 jekyll�
 
 따라서 github page에서 지원하지 않는 `jekyll-last-modified-at`과 같은 plugin은 사용할 수 없는 것이다. Gemfile에 넣고 배포하려 해도 적용되지 않으며, github action에서 다음과 같은 warning이 나타난다.
 
-![Untitled](https://github.com/user-attachments/assets/d88e03df-869c-46e0-af91-e66c72be6ab6)
+![Untitled](/assets/images/jekyll-last-modified-at-3.png)
 
 ### 해결 방법
 

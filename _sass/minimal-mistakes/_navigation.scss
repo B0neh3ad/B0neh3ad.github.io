@@ -82,9 +82,7 @@
         border: 1px solid mix(#000, $border-color, 25%);
         border-radius: 0;
   
-        &:hover {
-          color: $link-color-hover;
-        }
+
   
         &.current,
         &.current.disabled {
@@ -131,9 +129,7 @@
       border: 1px solid mix(#000, $border-color, 25%);
       border-radius: $border-radius;
   
-      &:hover {
-        @include yiq-contrasted($muted-text-color);
-      }
+
   
       &:first-child {
         border-start-end-radius: 0;
@@ -185,10 +181,6 @@
       text-decoration: none;
       -webkit-transition: none;
       transition: none;
-  
-      &:hover {
-        color: $masthead-link-color-hover;
-      }
   
       &.site-logo {
         margin-inline-start: 0;
@@ -279,11 +271,6 @@
         margin: 0;
         padding: 10px 20px;
         font-size: $type-size-5;
-  
-        &:hover {
-          color: $masthead-link-color-hover;
-          background: $navicon-link-color-hover;
-        }
       }
   
       &::before {
@@ -380,16 +367,7 @@
           transform: rotate(90deg);
         }
   
-        &:hover {
-          color: #fff;
-          border-color: $gray;
-          background-color: mix(white, #000, 20%);
-  
-          &:before,
-          &:after {
-            background-color: #fff;
-          }
-        }
+        
       }
   
       /* selected*/
@@ -403,18 +381,7 @@
         }
       }
   
-      /* on hover show expand*/
-      label:hover:after {
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-      }
-  
-      input:checked + label:hover:after {
-        -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-        transform: rotate(0);
-      }
+      
   
       ul {
         margin-bottom: 1em;
@@ -442,6 +409,10 @@
   
     a {
       color: inherit;
+      
+      &:hover {
+        color: $primary-color;
+      }
     }
   
     .active {
@@ -543,9 +514,7 @@
       line-height: 1.5;
       border-bottom: 1px solid $border-color;
   
-      &:hover {
-        color: $text-color;
-      }
+
     }
   
     li ul > li a {

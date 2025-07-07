@@ -22,7 +22,7 @@ en: &DEFAULT_EN
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
-  categories_nav_label       : "전체" # 사이드바 카테고리 네비게이션 타이틀
+  categories_nav_label       : "All" # 사이드바 카테고리 네비게이션 타이틀
   date_label                 : "Date:"
   last_modified_at_label     : "Last Updated:"
   comments_label             : "Leave a comment"

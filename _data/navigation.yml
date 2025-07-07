@@ -16,7 +16,7 @@ main:
   #   url: /sitemap/
 
 categories:
-  - title: "웹/앱 개발"
+  - title: "Web & App Development"
     children:
       - title: "Frontend"
         url: /categories/frontend
@@ -34,12 +34,12 @@ categories:
       - title: "AI"
         url: /categories/ai
 
-  - title: "알고리즘"
+  - title: "Algorithm"
     children:
       - title: "BOJ"
         url: /categories/boj
   
-  - title: "기타"
+  - title: "etc"
     children:
       - title: "etc"
         url: /categories/etc

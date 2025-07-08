@@ -43,3 +43,14 @@ categories:
     children:
       - title: "etc"
         url: /categories/etc
+
+# Portfolio navigation
+portfolio_nav:
+  - title: "프로젝트 소개"
+    url: "#프로젝트-소개"
+  - title: "주요 프로젝트"
+    url: "#주요-프로젝트"
+  - title: "기술 스택"
+    url: "#기술-스택"
+  - title: "연락처"
+    url: "#연락처"

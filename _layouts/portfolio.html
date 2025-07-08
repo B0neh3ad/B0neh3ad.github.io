@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+
+  <!-- Portfolio CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+
+  <!-- 페이지별 추가 스타일 -->
+  {% if page.custom_css %}
+  {% for css in page.custom_css %}
+  <link rel="stylesheet" href="{{ css }}">
+  {% endfor %}
+  {% endif %}
+</head>
+
+<body>
+  <div class="portfolio-container">
+    <header class="portfolio-header">
+      <!-- Blog Navigation Links -->
+      <div class="blog-nav-links">
+        <a href="{{ '/' | relative_url }}" class="blog-nav-link">
+          <span>Github blog</span>
+        </a>
+        <a href="https://velog.io/@b0neh3ad/posts" class="blog-nav-link" target="_blank">
+          <span>Velog</span>
+        </a>
+      </div>
+
+      <h1 class="portfolio-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="portfolio-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+    </header>
+
+    <main class="portfolio-content">
+      <!-- About Me -->
+      <div id="about-me">
+        <p class="main-primary">{{ page.about.main_primary | markdownify }}</p>
+        <p class="main-secondary">{{ page.about.main_secondary | markdownify }}</p>
+      </div>
+
+      <!-- 주요 프로젝트 -->
+      <div class="portfolio-section" id="주요-프로젝트">
+        <h2 class="section-title">주요 프로젝트</h2>
+        <div class="project-grid">
+          {% for project in page.projects %}
+            <div class="project-card" data-modal-id="modal-{{ project.id }}">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <div class="project-period">{{ project.period }}</div>
+              <div class="project-role">{{ project.role }}</div>
+              <div class="project-tech">
+                {% for tech in project.tech %}
+                  <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+              </div>
+              <a href="{{ project.link }}" class="project-link" target="_blank">
+                🔗 웹사이트 방문
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <!-- 모달들 -->
+      {% for project in page.projects %}
+        <div class="project-modal" id="modal-{{ project.id }}">
+          <div class="modal-content modal-large">
+            <button class="modal-close">&times;</button>
+            <div class="modal-flex">
+              <div class="modal-left">
+                <div class="modal-card-info">
+                  <h3 class="project-title">{{ project.title }}</h3>
+                  <div class="project-period">{{ project.period }}</div>
+                  <div class="project-role">{{ project.role }}</div>
+                  <div class="project-tech">
+                    {% for tech in project.tech %}
+                      <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                  </div>
+                  <a href="{{ project.link }}" class="project-link" target="_blank">
+                    🔗 웹사이트 방문
+                  </a>
+                </div>
+                <div class="modal-image-placeholder">
+                  {% if project.image %}
+                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                  {% else %}
+                    <span>웹사이트 이미지</span>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="modal-right">
+                <h4>프로젝트 설명</h4>
+                <ul>
+                  {% for desc in project.description %}
+                    <li>{{ desc }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      <!-- 기술 스택 -->
+      <div class="portfolio-section" id="기술-스택">
+        <h2 class="section-title">기술 스택</h2>
+        <div class="skills-grid">
+          {% for skill in page.skills %}
+            <div class="skill-category">
+              <h4>{{ skill.category }}</h4>
+              <ul class="skill-list">
+                {% for item in skill.items %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- 연락처 -->
+      <div class="portfolio-section" id="연락처">
+        <h2 class="section-title">연락처</h2>
+        <div class="contact-info">
+          {% for contact in page.contacts %}
+            <div class="contact-item">
+              <span>{{ contact.icon }}</span>
+              <a href="{{ contact.url }}" target="_blank">{{ contact.text }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 페이지별 추가 스크립트 -->
+  {% if page.custom_js %}
+  {% for js in page.custom_js %}
+  <script src="{{ js }}"></script>
+  {% endfor %}
+  {% endif %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // .portfolio-container 바깥으로 .project-modal 들을 이동
+      document.querySelectorAll('.project-modal').forEach(function (modal) {
+        document.body.appendChild(modal);
+      });
+    });
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', function (e) {
+        // 링크 클릭 시에는 모달이 뜨지 않도록
+        if (e.target.closest('a')) return;
+        const modalId = card.getAttribute('data-modal-id');
+        if (modalId) {
+          document.getElementById(modalId).classList.add('active');
+        }
+      });
+    });
+    document.querySelectorAll('.modal-close').forEach(btn => {
+      btn.addEventListener('click', function () {
+        btn.closest('.project-modal').classList.remove('active');
+      });
+    });
+    window.addEventListener('click', function (e) {
+      document.querySelectorAll('.project-modal.active').forEach(modal => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

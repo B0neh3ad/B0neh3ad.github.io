@@ -39,8 +39,8 @@
     <main class="portfolio-content">
       <!-- About Me -->
       <div id="about-me">
-        <p class="main-primary">{{ page.about.main_primary | markdownify }}</p>
-        <p class="main-secondary">{{ page.about.main_secondary | markdownify }}</p>
+        {{ page.about.main_primary | markdownify }}
+        {{ page.about.main_secondary | markdownify }}
       </div>
 
       <!-- 주요 프로젝트 -->

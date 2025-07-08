@@ -18,7 +18,7 @@ projects:
     role: "프론트엔드 개발 담당"
     tech: ["Next.js", "TypeScript", "Styled Components"]
     link: "http://siksha.wafflestudio.com/"
-    image: "/assets/images/siksha.png"
+    image: "/assets/images/portfolio/siksha.png"
     description:
       - "서울대 학내 식당의 실시간 식단 정보 제공"
       - "반응형 UI 및 사용자 맞춤 기능 구현"
@@ -30,7 +30,7 @@ projects:
     role: ""
     tech: ["Jekyll", "HTML/CSS", "JavaScript"]
     link: "https://B0neh3ad.github.io"
-    image: "/assets/images/blog.png"
+    image: "/assets/images/portfolio/blog.png"
     description:
       - "Jekyll 기반으로 테마 커스터마이징 및 유지보수"
       - "모바일/데스크톱 모두 최적화된 반응형 UI 구현"
@@ -41,7 +41,7 @@ projects:
     role: "프론트엔드 개발 담당 (UI/UX)"
     tech: ["Next.js", "TypeScript", "Tailwind CSS"]
     link: "https://skyst-waffleuniv-client.vercel.app/"
-    image: "/assets/images/darakbang.png"
+    image: "/assets/images/portfolio/darakbang.png"
     description:
       - "2025 SKYST 해커톤 상위 10개 팀 선정"
       - "음악 기반의 소셜 커뮤니티 서비스"
@@ -52,7 +52,7 @@ projects:
     role: ""
     tech: ["React.js", "HTML/CSS"]
     link: "https://fastmri-leaderboard.vercel.app/"
-    image: "/assets/images/fastmri.png"
+    image: "/assets/images/portfolio/fastmri.png"
     description:
       - "교내 AI 대회 참가자들을 위한 실시간 리더보드"
       - "React.js 기반 SPA로 실시간 점수 집계 및 결과 시각화"

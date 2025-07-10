@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
+  <title>{{ page.title }}</title>
 
   <!-- Portfolio CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
@@ -30,7 +30,7 @@
         </a>
       </div>
 
-      <h1 class="portfolio-title">{{ page.title }}</h1>
+      <h1 class="portfolio-title">About Me</h1>
       {% if page.subtitle %}
       <p class="portfolio-subtitle">{{ page.subtitle }}</p>
       {% endif %}
@@ -49,6 +49,13 @@
         <div class="project-grid">
           {% for project in page.projects %}
             <div class="project-card" data-modal-id="modal-{{ project.id }}">
+              <div class="project-image-placeholder">
+                {% if project.image %}
+                  <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image">
+                {% else %}
+                  <span>웹사이트 이미지</span>
+                {% endif %}
+              </div>
               <h3 class="project-title">{{ project.title }}</h3>
               <div class="project-period">{{ project.period }}</div>
               <div class="project-role">{{ project.role }}</div>
@@ -71,10 +78,14 @@
           <div class="modal-content modal-large">
             <button class="modal-close">&times;</button>
             <div class="modal-flex">
+              <div class="project-header-sticky mobile-only">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <div class="project-period">{{ project.period }}</div>
+              </div>
               <div class="modal-left">
-                <div class="modal-card-info">
-                  <h3 class="project-title">{{ project.title }}</h3>
-                  <div class="project-period">{{ project.period }}</div>
+                <div class="modal-left-top">
+                  <h3 class="project-title desktop-only">{{ project.title }}</h3>
+                  <div class="project-period desktop-only">{{ project.period }}</div>
                   <div class="project-role">{{ project.role }}</div>
                   <div class="project-tech">
                     {% for tech in project.tech %}
@@ -85,17 +96,19 @@
                     🔗 웹사이트 방문
                   </a>
                 </div>
-                <div class="modal-image-placeholder">
-                  {% if project.image %}
-                    <img src="{{ project.image }}" alt="{{ project.title }}">
-                  {% else %}
-                    <span>웹사이트 이미지</span>
-                  {% endif %}
+                <div class="modal-left-bottom">
+                  <div class="project-image-placeholder">
+                    {% if project.image %}
+                      <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image">
+                    {% else %}
+                      <span>웹사이트 이미지</span>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
               <div class="modal-right">
                 <h4>프로젝트 설명</h4>
-                <ul>
+                <ul class="modal-desc">
                   {% for desc in project.description %}
                     <li>{{ desc }}</li>
                   {% endfor %}
@@ -159,17 +172,22 @@
         const modalId = card.getAttribute('data-modal-id');
         if (modalId) {
           document.getElementById(modalId).classList.add('active');
+          document.body.style.overflow = 'hidden'; // 바깥 스크롤 막기
         }
       });
     });
     document.querySelectorAll('.modal-close').forEach(btn => {
       btn.addEventListener('click', function () {
         btn.closest('.project-modal').classList.remove('active');
+        document.body.style.overflow = 'auto'; // 복구
       });
     });
     window.addEventListener('click', function (e) {
       document.querySelectorAll('.project-modal.active').forEach(modal => {
-        if (e.target === modal) modal.classList.remove('active');
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto'; // 복구
+        }
       });
     });
   </script>

@@ -104,7 +104,7 @@ p {
   padding: 4rem 0 2rem;
   background: var(--bg-secondary);
   margin-bottom: 3rem;
-  border-radius: 0 0 2rem 2rem;
+  border-radius: 0 0 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -406,6 +406,18 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .project-card {
+    padding: 0;
+  }
+
+  .project-card::before {
+    display: none;
+  }
+
+  .project-info-container {
+    padding: 1.5rem;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -532,21 +544,6 @@ p {
   display: flex;
 }
 
-.project-image-placeholder {
-  width: 100%;
-  height: 300px;
-  background: #f3f4f6;
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-size: 1rem;
-  margin-top: auto;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
 .project-image {
   width: 100%;
   height: 100%;
@@ -557,6 +554,7 @@ p {
   .project-image-placeholder {
     height: 300px;
     font-size: 0.9rem;
+    margin-bottom: 0;
   }
 }
 
@@ -621,11 +619,12 @@ p {
 
 .modal-large {
   max-width: 1100px;
-  width: 98vw;
+  width: 90vw;
   min-height: 400px;
-  max-height: 95vh;
+  max-height: 85vh;
   padding: 2.5rem 2.5rem;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .modal-flex {
@@ -646,7 +645,6 @@ p {
 .modal-left-top {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .modal-left-bottom {
@@ -680,6 +678,9 @@ p {
   .modal-left-bottom {
     margin-top: 1rem;
   }
+  .modal-close {
+    right: -1rem;
+  }
 }
 
 .portfolio-title,
@@ -698,7 +699,6 @@ p {
   justify-content: center;
   color: #888;
   font-size: 1rem;
-  margin-top: auto;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
@@ -710,23 +710,12 @@ p {
   border-radius: 0.75rem;
 }
 
-@media (max-width: 900px) {
-  .modal-large {
-    max-width: 98vw;
-    padding: 2rem 2rem;
-  }
-  .modal-flex {
-    gap: 1.2rem;
-  }
-  .modal-left {
-    min-width: 0;
-  }
-  
+@media (max-width: 900px) {  
   .project-header-sticky {
     position: absolute;
     top: 0;
     background: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0 1rem 0;
     margin: -1rem 0 1rem 0;
     z-index: 10;
     border-bottom: 1px solid var(--border-color);
@@ -744,17 +733,21 @@ p {
   
   .modal-large {
     overflow-y: auto;
-    max-height: 95vh;
+    max-width: 90vw;
+    padding: 0 2rem;
+    max-height: 85vh;
     position: relative;
   }
   
   .modal-flex {
     min-height: 0;
+    gap: 1.2rem;
     overflow: visible;
     position: relative;
   }
   
   .modal-left {
+    min-width: 0;
     overflow: visible;
     position: relative;
   }

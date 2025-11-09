@@ -1,0 +1,86 @@
+---
+---
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    {% include seo.html %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      .resume-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      
+      /* Remove bullet points */
+      .resume-container ul,
+      .resume-container li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Project section styling */
+      .project-links {
+        background: #f8f9fa;
+        padding: 12px 16px;
+        border-radius: 6px;
+        margin: 10px 0 20px 0;
+        border-left: 4px solid #007acc;
+        font-size: 0.9em;
+      }
+      
+      .project-links a {
+        color: #007acc;
+        text-decoration: none;
+      }
+      
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Emoji and formatting for project goals and results */
+      p:has(> strong:first-child) {
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+      
+      /* Horizontal line styling */
+      hr {
+        border: none;
+        border-top: 1px solid #e1e4e8;
+        margin: 30px 0;
+      }
+      
+      /* General text improvements */
+      h3 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+      
+      /* Better spacing for structured content */
+      .resume-container p {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+
+  <body class="layout--resume">
+    <div class="resume-container">
+      {{ content }}
+    </div>
+  </body>
+</html>

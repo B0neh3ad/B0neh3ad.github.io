@@ -46,7 +46,7 @@ layout: resume
 
 ---
 
-### FastMRI Challenge
+### 2024 SNU FastMRI Challenge
 
 2024.06 - 2024.08
 

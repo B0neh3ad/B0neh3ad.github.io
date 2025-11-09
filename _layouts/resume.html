@@ -19,7 +19,7 @@
         font-family: NanumSquare, LL Circular, Apple SD Gothic Neo, sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
         min-height: 100vh;
         color: #000;
       }
@@ -29,7 +29,7 @@
         margin: 0 auto;
         padding: 40px 20px;
         background: #ffffff;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); */
         border-radius: 16px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -314,11 +314,25 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
       
+      /* Project box styling */
+      .project-box {
+        background: transparent;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+      
+      .project-box h3 {
+        margin-top: 0;
+      }
+      
       /* Responsive design */
       @media (max-width: 768px) {
         .resume-container {
           margin: 0;
-          padding: 24px 20px;
+          padding: 24px 20px 60px 20px;
           border-radius: 12px;
           line-height: 1.5;
           word-break: keep-all;
@@ -362,6 +376,11 @@
         hr {
           margin: 32px 0;
         }
+        
+        .project-box {
+          padding: 16px;
+          margin: 16px 0;
+        }
       }
     </style>
   </head>
@@ -370,6 +389,39 @@
     <div class="resume-container">
       {{ content }}
     </div>
+    
+    <script>
+      // 프로젝트 섹션을 박스로 감싸는 함수
+      document.addEventListener('DOMContentLoaded', function() {
+        const h3Elements = document.querySelectorAll('.resume-container h3');
+        
+        h3Elements.forEach(function(h3) {
+          // 먼저 h3 다음에 올 모든 요소들을 배열로 수집
+          const elementsToMove = [h3];
+          let nextElement = h3.nextElementSibling;
+          
+          while (nextElement && 
+                 nextElement.tagName !== 'HR' && 
+                 nextElement.tagName !== 'H2' && 
+                 nextElement.tagName !== 'H3') {
+            elementsToMove.push(nextElement);
+            nextElement = nextElement.nextElementSibling;
+          }
+          
+          // 프로젝트 박스 div 생성
+          const projectBox = document.createElement('div');
+          projectBox.className = 'project-box';
+          
+          // h3 위치에 박스 삽입
+          h3.parentNode.insertBefore(projectBox, h3);
+          
+          // 수집한 모든 요소들을 박스로 이동
+          elementsToMove.forEach(function(element) {
+            projectBox.appendChild(element);
+          });
+        });
+      });
+    </script>
     
   </body>
 </html>

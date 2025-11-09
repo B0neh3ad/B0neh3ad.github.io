@@ -44,8 +44,6 @@ layout: resume
 **[결과]**
 - **35개 팀 중 상위 5팀 선정**
 
----
-
 ### 2024 SNU FastMRI Challenge
 
 2024.06 - 2024.08
@@ -71,8 +69,6 @@ layout: resume
 **[결과]**  
 - **전체 4위 수상**  
 - Public dataset 기준 SSIM 0.9803 달성
-
----
 
 ### 국방 AI 경진대회
 
@@ -115,8 +111,6 @@ layout: resume
 - Frontend Part Leader (2025.02 - ), Frontend Part Member (2024.03 - 2025.02)
 - **20명 이상의 개발자 및 디자이너**와 협업  
 - **반응형 디자인** 및 **성능 최적화** 담당
-
----
 
 ### 발달장애인을 위한 모바일 키보드 앱 제작
 

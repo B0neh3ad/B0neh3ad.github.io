@@ -126,10 +126,10 @@ layout: resume
 
 ## 수상내역
 
-- 2024.11, ICPC 2024 Seoul Regional, 19위 (**High Honor**) / 88팀, ICPC
+- 2024.11, ICPC 2024 Seoul Regional, 19위 (**High Honor**) / 88팀 (팀 202124, [스코어보드](http://static.icpckorea.net/2024/regional/scoreboard/)), ICPC
 - 2024.09, SNU FastMRI Challenge, **4위**, 서울대학교
 - 2023.12, 국방 AI 경진대회, **2위**, 국방부
-- 2022.10, SNU 사회공헌PLUS+ 경진대회, **2위**, 서울대학교
+- 2022.10, SNU 사회공헌PLUS+ 경진대회, **2위** (팀 ['비긴어게인'](https://snusr.snu.ac.kr/activities/plus/competition?md=view&actidx=114)), 서울대학교
 
 ## 기타 활동
 

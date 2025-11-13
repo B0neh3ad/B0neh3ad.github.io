@@ -117,7 +117,7 @@ layout: resume
 2022.01 - 2022.10
   
 <div class="project-links">
-<a href="http://siksha.wafflestudio.com/">📎 Github</a>
+<a href="https://github.com/B0neh3ad/BarrierFreeKeyboard">📎 Github</a>
 </div>
 
 - **Android 네이티브** 기반 **AAC(보완대체의사소통)** 키보드 앱 개발  

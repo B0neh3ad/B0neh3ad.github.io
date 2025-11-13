@@ -136,10 +136,10 @@ layout: resume
 ### 2025 [SNU FastMRI Challenge](https://fastmri.snu.ac.kr/) 총괄 조교
 2025.05 - 2025.08
 - 대회 규정 설정 및 280여명의 참가자 관리
-- Vessl AI 및 공과대학 정보화지원실과 협업하여 k8s 기반 GPU 컨테이너 관리
+- [Vessl AI](https://vessl.ai/ko) 및 공과대학 정보화지원실과 협업하여 k8s 기반 GPU 컨테이너 관리
 - 기존 brain image dataset에 knee image를 추가하여 대회 주제의 범용성을 높임
 - 새로운 dataset을 위한 데이터 전처리, 학습 baseline 코드 작성
-- 참가자들이 대회 주제와 dataset에 빠르게 익숙해지도록 튜토리얼 notebook(.ipynb) 파일 제작 및 배포
+- 참가자들이 대회 주제와 dataset에 빠르게 익숙해지도록 [튜토리얼 notebook(.ipynb) 파일](https://github.com/LISTatSNU/FastMRI_challenge/blob/2025_baby_varnet/tutorial.ipynb) 제작 및 배포
 - [Github issues](https://github.com/LISTatSNU/FastMRI_challenge/issues)를 통해 대회 관련 질의응답을 수시로 진행
 
 ### 학부생 튜터

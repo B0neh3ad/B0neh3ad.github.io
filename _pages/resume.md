@@ -15,9 +15,13 @@ layout: resume
 
 서울대학교 컴퓨터공학부, 2021. 03 - 2027. 02 (예정)
 - 4학년 재학
-- 전체 평점 **4.04** / 4.3, 전공 평점 **4.1** / 4.3 (수강 학점: 100)
+- 전체 평점 **4.04** / 4.3, 전공 평점 **4.09** / 4.3 (수강 학점: 110)
 
 ## 경력
+
+### KRAFTON AI Fellowship @[Krafton AI](https://www.krafton.ai)
+
+2026.06 - 
 
 ### R&D Engineer Intern @[Rideflux](https://www.rideflux.com/)
 
@@ -155,7 +159,7 @@ layout: resume
 - python을 활용한 기초적인 웹 크롤링, 데이터 분석 및 시각화에 대한 수강생들의 질문에 답변
 - numpy, pandas, matplotlib, streamlit 활용
 
-### 와플스튜디오 - 서울대학교 웹/앱 개발 동아리
+### [와플스튜디오](https://www.wafflestudio.com) - 서울대학교 웹/앱 개발 동아리
 2021.09 - 
 - 안드로이드, 프론트엔드(React.js) 웹 개발 학습 및 팀 프로젝트 수행
 - 서울대학교 식단 제공 서비스 '식샤' 개발

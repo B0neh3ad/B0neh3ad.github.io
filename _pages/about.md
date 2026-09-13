@@ -29,7 +29,7 @@ Dec. 2025 - Feb. 2026
 **Efficient Abstract Reasoning under Constrained Inference (ARC-AGI Challenge)**  
 May. 2025 - Jun. 2025 / [github repo](https://github.com/b0neh3ad/dl-team14), [Report](https://github.com/B0neh3ad/dl-team14/blob/final-submission/team14_project_report.pdf)  
 *Position: Team Leader*
-- 'Foundations of Deep Learning' course project; selected as top 5 among 35 teams
+- 'Basics of Deep Learning' course project; selected as top 5 among 35 teams
 - Improved ARC-AGI inference accuracy under limited GPU and a 100-minute time constraint, optimizing inference time and memory (LoRA PEFT, 4-bit quantization)
 - Led baseline revision and experiment planning
 

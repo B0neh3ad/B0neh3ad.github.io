@@ -11,7 +11,7 @@ layout: single
 
 ## Education
 
-**Seoul National University**, Mar. 2021 - Feb. 2027 (Expected)  
+**Seoul National University**, Mar. 2021 - Aug. 2027 (Expected)  
 - Senior, Majoring Computer Science & Engineering  
 - Total GPA of 4.04 / 4.3, Major GPA of 4.09 / 4.3 (Credits taken: 110)
 
@@ -63,6 +63,7 @@ Jan. 2022 - Oct. 2022 / [github repo](https://github.com/B0neh3ad/BarrierFreeKey
 
 **Awards**
 
+2026.08, **Bronze Prize (10th / 1,603 teams)**, 2026 Nexon Young Programmers Challenge, *NEXON* (team 'CPG')  
 2024.09, **4th place**, SNU FastMRI Challenge, *SNU*  
 2023.12, **2nd place**, MAICON(Military AI Competition), *Ministry of National Defense, Republic of Korea*   
 2022.10, **2nd place**, SNU Social Responsibility PLUS+ Challenge, *SNU*  

@@ -1,0 +1,19 @@
+{%- assign p = include.post -%}
+{%- include rd-thumb.html post=p -%}
+{%- assign rd_title = p.title | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
+{%- assign rd_c0 = rd_title | slice: 0 -%}
+{%- if rd_c0 == "[" and rd_title contains "]" -%}
+  {%- assign rd_pre = rd_title | split: "]" | first | append: "]" -%}
+  {%- assign rd_rest = rd_title | remove_first: rd_pre | strip -%}
+  {%- capture rd_title -%}<span class="rd-pre">{{ rd_pre }}</span> {{ rd_rest }}{%- endcapture -%}
+{%- endif -%}
+<li class="rd-item">
+  <a class="rd-item__link{% if rd_thumb %} has-thumb{% endif %}" href="{{ p.url | relative_url }}">
+    <span class="rd-day" aria-hidden="true"><b>{{ p.date | date: "%-d" }}</b><small>{{ p.date | date: "%b %Y" | upcase }}</small></span>
+    <span class="rd-item__tx">
+      <span class="rd-item__title">{{ rd_title }}</span>
+      <span class="rd-item__meta">{% if p.categories[0] %}<span class="rd-item__cat">{{ p.categories[0] }}</span>{% endif %}<time class="rd-item__date" datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%Y.%m.%d" }}</time></span>
+    </span>
+    <span class="rd-thumb">{% if rd_thumb %}<img src="{{ rd_thumb | relative_url }}" alt="" loading="lazy" decoding="async">{% endif %}</span>
+  </a>
+</li>

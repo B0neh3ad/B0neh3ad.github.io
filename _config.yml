@@ -17,6 +17,22 @@ force_polling: true
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# Design
+# 현재 디자인: calm (⑲ 고요). 다른 디자인(walk ⑨ 산책, daylight ⑮ 하루의 빛)은 _design-templates/ 에 보관돼 있고,
+# `_design-templates/apply.sh walk` 처럼 실행하면 CSS·사진을 복사하고 아래 design 값을 바꿔 줘요.
+design                   : calm
+redesign:
+  calm:
+    photo                : /assets/images/redesign/desk-wood-window.jpg   # 홈 첫 화면 사진
+  # 아래 두 디자인의 사진은 apply.sh로 적용할 때 assets/images/redesign/ 으로 복사돼요.
+  walk:
+    banner               : /assets/images/redesign/win-plant-blinds.jpg
+  daylight:              # 방문자의 현지 시각에 맞춰 바뀌는 머리 사진 (?time=morning 처럼 미리보기 가능)
+    morning              : /assets/images/redesign/room-bay-window.jpg   # 05–11시
+    afternoon            : /assets/images/redesign/win-plant-blinds.jpg  # 11–17시
+    evening              : /assets/images/redesign/win-warm.jpg          # 17–21시
+    night                : /assets/images/redesign/win-leaf-shadow.jpg   # 21–05시
+
 # Site Settings
 locale                   : "en-US"
 title                    : "Compile Error"
@@ -224,7 +240,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

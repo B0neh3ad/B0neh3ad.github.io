@@ -1,0 +1,7 @@
+<footer class="rd-footer">
+  <span>© {{ site.time | date: "%Y" }} {{ site.name | default: site.title }}</span>
+  {%- for link in site.footer.links -%}
+    {%- if link.url -%}<a href="{{ link.url }}" rel="nofollow noopener noreferrer">{{ link.label }}</a>{%- endif -%}
+  {%- endfor -%}
+  {%- unless site.atom_feed.hide -%}<a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">RSS</a>{%- endunless -%}
+</footer>

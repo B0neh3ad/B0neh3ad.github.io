@@ -1,0 +1,12 @@
+{%- comment -%}
+  Desktop left category navigation (sticky). On narrow screens it is hidden and the same tree
+  lives in the hamburger menu instead (rd-header.html).
+  Hidden when a page sets `sidebar_categories: false`.
+{%- endcomment -%}
+{%- unless page.sidebar_categories == false -%}
+<aside class="rd-side" aria-label="카테고리">
+  <nav class="rd-side__inner">
+    {% include rd-cat-tree.html %}
+  </nav>
+</aside>
+{%- endunless -%}

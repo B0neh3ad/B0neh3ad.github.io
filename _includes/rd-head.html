@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+{% include seo.html %}
+
+{% unless site.atom_feed.hide %}
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% endunless %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+{%- assign rd_design = site.design | default: "walk" -%}
+<script>
+  (function () {
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem("rd-theme");
+      if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+    } catch (e) {}
+    {%- if rd_design == "daylight" %}
+    var forced = new URLSearchParams(location.search).get("time");
+    var h = new Date().getHours();
+    var t = h >= 5 && h < 11 ? "morning" : h >= 11 && h < 17 ? "afternoon" : h >= 17 && h < 21 ? "evening" : "night";
+    root.dataset.time = /^(morning|afternoon|evening|night)$/.test(forced) ? forced : t;
+    {%- endif %}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/redesign/base.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/redesign/' | append: rd_design | append: '.css' | relative_url }}">
+
+{%- if rd_design == "daylight" %}
+<style>
+  :root {
+    --rd-photo-morning: url("{{ site.redesign.daylight.morning | relative_url }}");
+    --rd-photo-afternoon: url("{{ site.redesign.daylight.afternoon | relative_url }}");
+    --rd-photo-evening: url("{{ site.redesign.daylight.evening | relative_url }}");
+    --rd-photo-night: url("{{ site.redesign.daylight.night | relative_url }}");
+  }
+</style>
+{%- endif %}

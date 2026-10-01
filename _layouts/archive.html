@@ -2,25 +2,16 @@
 layout: default
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
+{%- assign rd_design = site.design | default: "walk" -%}
+{% include rd-top.html kind="page" title=page.title %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
+<div class="rd-body{% if page.sidebar_categories == false %} rd-body--solo{% endif %}">
+  {% include rd-sidebar.html %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
+  <main id="main" class="rd-main rd-main--archive">
+    {%- if rd_design == "walk" or rd_design == "calm" -%}
+      <header class="rd-article__head"><h1 class="rd-article__title">{{ page.title }}</h1></header>
+    {%- endif -%}
     {{ content }}
-  </div>
+  </main>
 </div>

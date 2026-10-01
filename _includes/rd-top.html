@@ -1,0 +1,51 @@
+{%- comment -%}
+  Everything above the main column: header + the design's photo area.
+  include.kind: home | post | page
+  include.title / include.kicker: used on post and page tops
+{%- endcomment -%}
+{%- assign rd_design = site.design | default: "walk" -%}
+{%- assign bar_title = nil -%}
+{%- if include.kind == "post" -%}{%- assign bar_title = include.title -%}{%- endif -%}
+{%- assign first_page = true -%}
+{%- if paginator and paginator.page > 1 -%}{%- assign first_page = false -%}{%- endif -%}
+
+{%- case rd_design -%}
+
+{%- when "daylight" -%}
+  <section class="rd-hero rd-hero--{{ include.kind }}">
+    <div class="rd-hero__photo" aria-hidden="true"></div>
+    {% include rd-header.html overlay=true bar_title=bar_title %}
+    <div class="rd-hero__body">
+      {%- if include.kind == "home" -%}
+        <h1 class="rd-hero__title">{{ site.title }}</h1>
+        <p class="rd-hero__desc">{{ site.description }}</p>
+      {%- else -%}
+        {%- if include.kicker != blank -%}<p class="rd-kicker">{{ include.kicker }}</p>{%- endif -%}
+        <h1 class="rd-hero__title">{{ include.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h1>
+      {%- endif -%}
+    </div>
+  </section>
+
+{%- when "calm" -%}
+  {%- if include.kind == "home" -%}
+  <div class="rd-stage" aria-hidden="true"><img src="{{ site.redesign.calm.photo | relative_url }}" alt=""></div>
+  {% include rd-header.html overlay=true bar_title=bar_title %}
+  <section class="rd-cover rd-cover--home">
+    <div class="rd-orn"><h1 class="rd-cover__title">{{ site.title }}</h1></div>
+    <p class="rd-cover__desc">{{ site.description }}</p>
+    <span class="rd-cue" aria-hidden="true"></span>
+  </section>
+  {%- else -%}
+  {%- comment -%} no photo outside the home page: a solid bar from the start {%- endcomment -%}
+  {% include rd-header.html overlay=true solid=true bar_title=bar_title %}
+  {%- endif -%}
+
+{%- else -%}
+  {% include rd-header.html bar_title=bar_title %}
+  <div class="rd-wrap">
+    {%- if include.kind == "home" -%}
+      <figure class="rd-banner"><img src="{{ site.redesign.walk.banner | relative_url }}" alt=""><figcaption><h1 class="rd-banner__desc">{{ site.description }}</h1></figcaption></figure>
+    {%- endif -%}
+  </div>
+
+{%- endcase -%}

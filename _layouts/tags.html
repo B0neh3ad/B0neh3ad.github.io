@@ -4,40 +4,26 @@ layout: archive
 
 {{ content }}
 
-{% assign tags_max = 0 %}
-{% for tag in site.tags %}
-  {% if tag[1].size > tags_max %}
-    {% assign tags_max = tag[1].size %}
-  {% endif %}
-{% endfor %}
+{%- assign tags_max = 0 -%}
+{%- for tag in site.tags -%}{%- if tag[1].size > tags_max -%}{%- assign tags_max = tag[1].size -%}{%- endif -%}{%- endfor -%}
 
-<ul class="taxonomy__index">
-  {% for i in (1..tags_max) reversed %}
-    {% for tag in site.tags %}
-      {% if tag[1].size == i %}
-        <li>
-          <a href="#{{ tag[0] | slugify }}">
-            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-</ul>
+<nav class="rd-chips rd-chips--tags" aria-label="태그">
+  {%- for i in (1..tags_max) reversed -%}
+    {%- for tag in site.tags -%}
+      {%- if tag[1].size == i -%}<a class="rd-chip" href="#{{ tag[0] | slugify }}">#{{ tag[0] }}<b>{{ i }}</b></a>{%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+</nav>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% for i in (1..tags_max) reversed %}
-  {% for tag in site.tags %}
-    {% if tag[1].size == i %}
-      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
-        <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
-            {% include archive-single.html type=entries_layout %}
-          {% endfor %}
-        </div>
-        <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+{%- for i in (1..tags_max) reversed -%}
+  {%- for tag in site.tags -%}
+    {%- if tag[1].size == i -%}
+      <section class="rd-group" id="{{ tag[0] | slugify }}">
+        <h2 class="rd-group__title">#{{ tag[0] }}<span>{{ i }}</span></h2>
+        <ol class="rd-list">
+          {%- for post in tag.last -%}{%- unless post.hidden -%}{% include rd-post-item.html post=post %}{%- endunless -%}{%- endfor -%}
+        </ol>
       </section>
-    {% endif %}
-  {% endfor %}
-{% endfor %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}

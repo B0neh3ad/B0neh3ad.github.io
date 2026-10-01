@@ -1,0 +1,27 @@
+{%- comment -%}
+  Sets `rd_thumb` to an image that belongs to include.post, or nil.
+  Order: header.teaser → header.image → header.overlay_image → first <img> in the post body.
+  Local paths are kept only if the file actually exists, so a missing teaser never shows a broken image.
+{%- endcomment -%}
+{%- assign rd_thumb = nil -%}
+{%- assign rd_candidates = "" | split: "" -%}
+{%- if include.post.header.teaser -%}{%- assign rd_candidates = rd_candidates | push: include.post.header.teaser -%}{%- endif -%}
+{%- if include.post.header.image -%}{%- assign rd_candidates = rd_candidates | push: include.post.header.image -%}{%- endif -%}
+{%- if include.post.header.overlay_image -%}{%- assign rd_candidates = rd_candidates | push: include.post.header.overlay_image -%}{%- endif -%}
+{%- assign rd_img_parts = include.post.content | split: "<img " -%}
+{%- if rd_img_parts.size > 1 -%}
+  {%- assign rd_src_parts = rd_img_parts[1] | split: 'src="' -%}
+  {%- if rd_src_parts.size > 1 -%}
+    {%- assign rd_first = rd_src_parts[1] | split: '"' | first -%}
+    {%- assign rd_candidates = rd_candidates | push: rd_first -%}
+  {%- endif -%}
+{%- endif -%}
+{%- for cand in rd_candidates -%}
+  {%- if cand contains "://" -%}
+    {%- assign rd_thumb = cand -%}{%- break -%}
+  {%- else -%}
+    {%- assign rd_path = cand | remove_first: site.baseurl -%}
+    {%- assign rd_hit = site.static_files | where: "path", rd_path | first -%}
+    {%- if rd_hit -%}{%- assign rd_thumb = cand -%}{%- break -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

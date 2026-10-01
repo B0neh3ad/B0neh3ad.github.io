@@ -2,40 +2,18 @@
 ---
 
 <!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+{%- assign rd_design = site.design | default: "walk" %}
+<html lang="{{ site.locale | slice: 0,2 | default: 'ko' }}" data-design="{{ rd_design }}">
   <head>
-    {% include head.html %}
+    {% include rd-head.html %}
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include_cached skip-links.html %}
-    {% include_cached masthead.html %}
-
-    <div class="initial-content">
-      {{ content }}
-    </div>
-
-    {% if site.search == true %}
-      <div class="search-content">
-        {% include_cached search/search_form.html %}
-      </div>
-    {% endif %}
-
-    <div id="footer" class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include_cached footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
+  <body class="rd rd--{{ rd_design }} layout--{{ page.layout | default: layout.layout }}">
+    <a class="rd-skip" href="#main">본문으로 건너뛰기</a>
+    {{ content }}
+    {% include rd-footer.html %}
+    <button class="rd-totop" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg></button>
+    {% include rd-scripts.html %}
   </body>
 </html>

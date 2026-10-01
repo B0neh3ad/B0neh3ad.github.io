@@ -1,0 +1,24 @@
+{%- if paginator.total_pages > 1 -%}
+{%- comment -%} every page link lands on the post list (#posts), not back on the home cover photo {%- endcomment -%}
+<nav class="rd-pager" aria-label="페이지">
+  {%- if paginator.previous_page -%}
+    <a class="rd-pager__step" href="{{ paginator.previous_page_path | relative_url }}#posts" aria-label="이전 페이지">←</a>
+  {%- else -%}
+    <span class="rd-pager__step is-off" aria-hidden="true">←</span>
+  {%- endif -%}
+  {%- for n in (1..paginator.total_pages) -%}
+    {%- if n == paginator.page -%}
+      <span class="rd-pager__num is-current" aria-current="page">{{ n }}</span>
+    {%- elsif n == 1 -%}
+      <a class="rd-pager__num" href="{{ '/' | relative_url }}#posts">1</a>
+    {%- else -%}
+      <a class="rd-pager__num" href="{{ site.paginate_path | replace: ':num', n | relative_url }}#posts">{{ n }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if paginator.next_page -%}
+    <a class="rd-pager__step" href="{{ paginator.next_page_path | relative_url }}#posts" aria-label="다음 페이지">→</a>
+  {%- else -%}
+    <span class="rd-pager__step is-off" aria-hidden="true">→</span>
+  {%- endif -%}
+</nav>
+{%- endif -%}

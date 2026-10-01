@@ -2,6 +2,7 @@
 title: "About Me"
 permalink: /about/
 layout: single
+sidebar_categories: false
 ---
 
 ### *Jinsu Kim*   

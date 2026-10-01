@@ -1,0 +1,28 @@
+{%- comment -%}
+  giscus, themed to match the page. The theme follows the light/dark toggle (see rd-scripts.html).
+  Rendered only in production, same as before.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" and site.comments.provider == "giscus" and page.comments -%}
+<section class="rd-comments" id="giscus-comments"></section>
+<script>
+  (function () {
+    var box = document.getElementById("giscus-comments");
+    var dark = document.documentElement.dataset.theme === "dark" ||
+      (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+    var s = document.createElement("script");
+    s.src = "https://giscus.app/client.js";
+    s.setAttribute("data-repo", "{{ site.repository | downcase }}");
+    s.setAttribute("data-repo-id", "{{ site.comments.giscus.repo_id }}");
+    s.setAttribute("data-category", "{{ site.comments.giscus.category_name }}");
+    s.setAttribute("data-category-id", "{{ site.comments.giscus.category_id }}");
+    s.setAttribute("data-mapping", "{{ site.comments.giscus.discussion_term | default: 'pathname' }}");
+    s.setAttribute("data-reactions-enabled", "{{ site.comments.giscus.reactions_enabled | default: 1 }}");
+    s.setAttribute("data-input-position", "{{ site.comments.giscus.input_position | default: 'bottom' }}");
+    s.setAttribute("data-theme", dark ? "dark_dimmed" : "light");
+    s.setAttribute("data-lang", "ko");
+    s.setAttribute("crossorigin", "anonymous");
+    s.async = true;
+    box.appendChild(s);
+  })();
+</script>
+{%- endif -%}

@@ -1,0 +1,33 @@
+{%- comment -%}
+  Site header shared by all three designs. Each design positions it differently in CSS
+  (walk: in flow, daylight: inside the hero, calm: fixed over the photo).
+  On narrow screens the nav links collapse into a hamburger menu that also holds the category tree.
+{%- endcomment -%}
+<header class="rd-header{% if include.overlay %} rd-header--overlay{% endif %}{% if include.solid %} rd-header--solid is-solid{% endif %}">
+  <a class="rd-logo" href="{{ '/' | relative_url }}">{% if site.design == "walk" or site.design == nil %}<span class="rd-leaf" aria-hidden="true"></span>{% endif %}{{ site.title }}</a>
+  {%- capture main_links -%}
+    {%- for link in site.data.navigation.main -%}
+      {%- assign link_url = link.url | relative_url -%}
+      {%- assign current = false -%}
+      {%- if link.url == "/" -%}
+        {%- if page.url == "/" or paginator.page > 1 -%}{%- assign current = true -%}{%- endif -%}
+      {%- elsif page.url contains link.url -%}
+        {%- assign current = true -%}
+      {%- endif -%}
+      <a href="{{ link_url }}"{% if current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if include.bar_title -%}<p class="rd-bar-title" aria-hidden="true">{{ include.bar_title | markdownify | strip_html | strip }}</p>{%- endif %}
+  <nav class="rd-nav" aria-label="주요 메뉴">{{ main_links }}</nav>
+  <button class="rd-theme" type="button" aria-label="라이트/다크 모드 전환">
+    <svg class="rd-theme__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+    <svg class="rd-theme__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z"/></svg>
+  </button>
+  <button class="rd-burger" type="button" aria-expanded="false" aria-controls="rd-menu" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="rd-menu" id="rd-menu" inert>
+    <nav class="rd-menu__main" aria-label="주요 메뉴">{{ main_links }}</nav>
+    <nav class="rd-menu__cats" aria-label="카테고리">{% include rd-cat-tree.html %}</nav>
+  </div>
+</header>

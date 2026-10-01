@@ -1,0 +1,26 @@
+{%- comment -%}
+  Category tree from _data/navigation.yml `categories` (same structure as the old Minimal Mistakes sidebar).
+  Used by the desktop sidebar (rd-sidebar.html) and the mobile hamburger menu (rd-header.html).
+{%- endcomment -%}
+{%- assign all_count = site.posts | where_exp: "p", "p.hidden != true" | size -%}
+{%- assign current_cat = page.taxonomy | default: page.categories[0] -%}
+{%- assign on_all = false -%}
+{%- if page.url == "/categories/" or page.url == "/" or paginator.page > 1 -%}{%- assign on_all = true -%}{%- endif -%}
+<div class="rd-cats">
+  <a class="rd-cats__all{% if on_all %} is-active{% endif %}" href="{{ '/categories/' | relative_url }}">{{ site.data.ui-text[site.locale].categories_nav_label | default: "All" }}<b>{{ all_count }}</b></a>
+  {%- for group in site.data.navigation.categories -%}
+    {%- assign solo = false -%}
+    {%- if group.children.size == 1 and group.children[0].title == group.title -%}{%- assign solo = true -%}{%- endif -%}
+    <div class="rd-cats__group">
+      {%- unless solo -%}<p class="rd-cats__title">{{ group.title }}</p>{%- endunless -%}
+      <ul>
+        {%- for child in group.children -%}
+          {%- assign n = site.categories[child.title].size -%}
+          {%- if n > 0 -%}
+            <li><a href="{{ child.url | relative_url }}"{% if child.title == current_cat %} class="is-active"{% if page.taxonomy == child.title %} aria-current="page"{% endif %}{% endif %}>{{ child.title }}<b>{{ n }}</b></a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endfor -%}
+</div>

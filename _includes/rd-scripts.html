@@ -79,47 +79,59 @@
     // One gesture down anywhere on the cover glides to the post list. Scrolling up (and inside the list) stays free.
     var homeCover = document.querySelector(".rd-cover--home");
     if (homeCover) {
-      var gliding = false, lockUntil = 0, touchY = null;
+      var gliding = false, lockUntil = 0, lastDelta = 0, lastWheel = 0, touchY = null, touchDecided = false;
       var listTop = function () {
         return Math.round(homeCover.getBoundingClientRect().bottom + window.scrollY - (header ? header.offsetHeight : 0));
       };
       var ease = function (p) { return p < .5 ? 8 * p * p * p * p : 1 - Math.pow(-2 * p + 2, 4) / 2; };
-      var glideTo = function (y) {
-        if (reduceMotion.matches) { window.scrollTo(0, y); lockUntil = performance.now() + 300; return; }
-        var from = window.scrollY, dist = y - from, t0 = null, dur = 900;
+      var finish = function () { gliding = false; lockUntil = performance.now() + 1000; };
+      // desktop: eased glide; touch: the browser's own smooth scroll (runs off the main thread, no stutter)
+      var glideTo = function (y, native) {
+        if (reduceMotion.matches) { window.scrollTo(0, y); finish(); return; }
         gliding = true;
+        if (native) {
+          window.scrollTo({ top: y, behavior: "smooth" });
+          var done = false, end = function () { if (!done) { done = true; finish(); } };
+          addEventListener("scrollend", end, { once: true });
+          setTimeout(end, 1200);
+          return;
+        }
+        var from = window.scrollY, dist = y - from, t0 = null, dur = 900;
         var step = function (ts) {
           if (t0 === null) t0 = ts;
           var p = Math.min(1, (ts - t0) / dur);
           window.scrollTo(0, from + dist * ease(p));
-          if (p < 1) requestAnimationFrame(step);
-          else { gliding = false; lockUntil = performance.now() + 350; }
+          if (p < 1) requestAnimationFrame(step); else finish();
         };
         requestAnimationFrame(step);
       };
-      var busy = function () { return gliding || performance.now() < lockUntil || root.classList.contains("rd-menu-open"); };
-      // returns true when the gesture was turned into a glide
-      var route = function (down) {
-        var T = listTop();
-        if (down && window.scrollY < T - 2) { glideTo(T); return true; }
-        return false;
-      };
+      var busy = function () { return gliding || root.classList.contains("rd-menu-open"); };
+      var inCover = function () { return window.scrollY < listTop() - 2; };
       addEventListener("wheel", function (e) {
         if (root.classList.contains("rd-menu-open") || e.ctrlKey || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
-        if (gliding || performance.now() < lockUntil) {
-          e.preventDefault();
-          if (!gliding) lockUntil = performance.now() + 200; // swallow trackpad momentum until it settles
-          return;
+        var now = performance.now(), gap = now - lastWheel, d = Math.abs(e.deltaY);
+        lastWheel = now;
+        if (gliding) { e.preventDefault(); lastDelta = d; return; }
+        // right after arriving, swallow only the unbroken momentum stream that started before the glide ended.
+        // A pause (>120ms), a clearly stronger push, or the 1s cap means a new scroll: let the list move.
+        if (now < lockUntil) {
+          if (gap < 120 && d <= lastDelta * 1.3 + 1) { lastDelta = d; e.preventDefault(); return; }
+          lockUntil = 0;
         }
-        if (e.deltaY !== 0 && route(e.deltaY > 0)) e.preventDefault();
+        if (e.deltaY > 0 && inCover()) { e.preventDefault(); lastDelta = 0; glideTo(listTop(), false); }
       }, { passive: false });
-      addEventListener("touchstart", function (e) { touchY = e.touches.length === 1 ? e.touches[0].clientY : null; }, { passive: true });
+      addEventListener("touchstart", function (e) {
+        touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
+        touchDecided = false;
+      }, { passive: true });
       addEventListener("touchmove", function (e) {
-        if (touchY === null) return;
-        if (busy()) { e.preventDefault(); return; }
+        if (touchY === null || root.classList.contains("rd-menu-open")) return;
+        if (gliding) { e.preventDefault(); return; }
+        if (touchDecided) return;
         var dy = touchY - e.touches[0].clientY;
-        if (Math.abs(dy) < 10) return;
-        if (route(dy > 0)) { e.preventDefault(); touchY = null; }
+        if (dy === 0) return;
+        touchDecided = true; // decide on the very first move, before the page starts scrolling natively
+        if (dy > 0 && inCover()) { e.preventDefault(); glideTo(listTop(), true); }
       }, { passive: false });
       addEventListener("touchend", function () { touchY = null; }, { passive: true });
       addEventListener("keydown", function (e) {
@@ -127,7 +139,7 @@
         var down = e.key === "ArrowDown" || e.key === "PageDown" || (e.key === " " && !e.shiftKey);
         if (!down) return;
         if (busy()) { e.preventDefault(); return; }
-        if (route(true)) e.preventDefault();
+        if (inCover()) { e.preventDefault(); glideTo(listTop(), false); }
       });
       var cue = homeCover.querySelector(".rd-cue");
       if (cue) cue.addEventListener("click", function () { if (!busy()) glideTo(listTop()); });

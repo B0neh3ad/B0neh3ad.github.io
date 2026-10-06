@@ -28,10 +28,10 @@
 
 /* the photo stays put; everything else scrolls over it */
 .rd-stage { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
-.rd-stage img { position: absolute; inset: -4%; width: 108%; height: 108%; max-width: none; object-fit: cover; animation: rd-kb 34s ease-in-out infinite alternate; filter: saturate(.45); }
+.rd-stage img { position: absolute; inset: -4%; width: 108%; height: 108%; max-width: none; object-fit: cover; animation: rd-kb 34s ease-in-out infinite alternate; will-change: transform; } /* photo file is pre-desaturated */
 .rd-stage::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 42%, rgb(0 0 0 / .34), rgb(0 0 0 / .58)); }
-:root[data-theme="dark"] .rd-stage img { filter: saturate(.45) brightness(.72); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rd-stage img { filter: saturate(.45) brightness(.72); } }
+:root[data-theme="dark"] .rd-stage::after { background: radial-gradient(ellipse at 50% 42%, rgb(0 0 0 / .52), rgb(0 0 0 / .7)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rd-stage::after { background: radial-gradient(ellipse at 50% 42%, rgb(0 0 0 / .52), rgb(0 0 0 / .7)); } }
 
 .rd-header--overlay { position: fixed; top: 0; left: 0; right: 0; z-index: 20; padding: 14px 26px; padding-top: calc(14px + env(safe-area-inset-top, 0px)); color: #fff; transition: background-color .4s, color .4s, box-shadow .4s; }
 .rd-header--overlay .rd-logo { font-size: 18px; }

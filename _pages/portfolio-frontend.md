@@ -89,6 +89,6 @@ contacts:
     text: "GitHub"
   - icon: "💼"
     label: "LinkedIn"
-    url: "https://www.linkedin.com/in/진수-김-b769832a1/"
+    url: "https://www.linkedin.com/in/jinsoo-kim-b769832a1/"
     text: "LinkedIn"
 ---

@@ -5,7 +5,7 @@ layout: resume
 ---
 
 # **김진수**   
-[mail](mailto:js1044k@gmail.com) [github](http://github.com/B0neh3ad) [github blog](http://B0neh3ad.github.io) [velog](https://velog.io/@b0neh3ad/posts) [linkedin](https://www.linkedin.com/in/%EC%A7%84%EC%88%98-%EA%B9%80-b769832a1/)
+[mail](mailto:js1044k@gmail.com) [github](http://github.com/B0neh3ad) [github blog](http://B0neh3ad.github.io) [velog](https://velog.io/@b0neh3ad/posts) [linkedin](https://www.linkedin.com/in/jinsoo-kim-b769832a1/)
 
 - 기술에 앞서 문제 해결을, 문제 해결에 앞서 문제의 의미를 고민하고자 합니다.
 - 소통과 협업을 통해 성장하여 더 나은 결과물을 만들고자 노력합니다.
@@ -13,9 +13,9 @@ layout: resume
 
 ## 학력
 
-서울대학교 컴퓨터공학부, 2021. 03 - 2027. 08 (예정)
+서울대학교 컴퓨터공학부, 2021. 03 - 2028. 02 (예정)
 - 4학년 재학
-- 전체 평점 **4.04** / 4.3, 전공 평점 **4.09** / 4.3 (수강 학점: 110)
+- 전체 평점 **4.04** / 4.3, 전공 평점 **4.09** / 4.3
 
 ## 경력
 
